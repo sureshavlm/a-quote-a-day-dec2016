@@ -15,7 +15,9 @@ app.post("/login", function(req, res) {
 	res.end("Login successful.");
 });
 
-app.listen(8080, function() {
+var port = process.env.port || 8080;
+
+app.listen(port, function() {
 	console.log("Server listening on port 8080");
 });
 
